@@ -1,13 +1,12 @@
 import './App.css';
 
 function App() {
-  const obj = { name: 'john', surname: 'smit' };
+  const attr = 'block';
 
   return (
-    <p>
-      name: <span>{obj.name}</span>, <br></br>
-      surname: <span>{obj.surname}</span>,
-    </p>
+    <div id = {attr}>
+      text
+    </div>
   );
 }
 
