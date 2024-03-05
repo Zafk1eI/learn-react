@@ -1,10 +1,10 @@
 import './App.css';
 
 function App() {
-  const isAuth = true;
+  const isAuth = false;
 
   return <div>
-    {isAuth && <p>Вы авторизованы</p>}
+    {!isAuth && <p>пожалуйста, авторизуйтесь</p>}
   </div>;
 }
 
