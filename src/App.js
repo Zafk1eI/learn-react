@@ -1,12 +1,12 @@
 import './App.css';
 
 function App() {
-  function func(event) {
-    console.log(event.target); // объект с событием
+  function func(arg_1, event, arg_2) {
+    console.log(arg_1, event, arg_2);
   }
 
   return <div>
-    <button onClick={func}>text</button>
+    <button onClick={event => func('eee', event, 'eee')}>act</button>
   </div>;
 }
 
