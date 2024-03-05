@@ -1,11 +1,19 @@
 import './App.css';
 
 function App() {
-	const num = 4;
-	
-	return <div>
-		result: {Math.sqrt(num)}
-	</div>;
+  let text;
+  const isAdult = true;
+
+  if (isAdult) {
+    text = <p>Есть 18</p>;
+  }
+  else {
+    text = <p>Нет 18</p>
+  }
+
+  return <div>
+    {text}
+  </div>;
 }
 
 export default App;
