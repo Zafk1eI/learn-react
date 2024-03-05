@@ -1,19 +1,15 @@
 import './App.css';
 
 function App() {
-  let text;
-  const isAdult = true;
-
-  if (isAdult) {
-    text = <p>Есть 18</p>;
-  }
-  else {
-    text = <p>Нет 18</p>
-  }
-
-  return <div>
-    {text}
-  </div>;
+	let text;
+	const isAdmin = false;
+	
+	if (isAdmin) {
+		text = <div><p>Пользователь является администратором</p></div>;
+	} else {
+		text = <div></div>;
+	}
+	return text;
 }
 
 export default App;
