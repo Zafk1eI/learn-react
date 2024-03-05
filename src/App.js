@@ -1,20 +1,18 @@
 import './App.css';
 
 function App() {
-	function getdigitsum(num) {
-		num = String(num)
+  function getDigitsSum(num) {
+    num = String(num)
     let result = 0
-    for (let i = 0; i < num.length; i++){
+    for (let i = 0; i < num.length; i++) {
       result += Number(num[i])
     }
     return result
-	}
-	
-	const sum = getdigitsum(123);
-	
-	return <div>
-		{sum}
-	</div>
+  }
+
+  return <p>
+    {getDigitsSum(12345)}
+  </p>
 }
 
 export default App;
