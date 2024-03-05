@@ -1,18 +1,18 @@
 import './App.css';
 
 function App() {
-  function getDigitsSum(num) {
-    num = String(num)
-    let result = 0
-    for (let i = 0; i < num.length; i++) {
-      result += Number(num[i])
-    }
-    return result
+  function show1() {
+    alert(1);
   }
 
-  return <p>
-    {getDigitsSum(12345)}
-  </p>
+  function show2() {
+    alert(2);
+  }
+
+  return <div>
+    <button onClick={show1}>act1</button>
+    <button onClick={show2}>act2</button>
+  </div>;
 }
 
 export default App;
