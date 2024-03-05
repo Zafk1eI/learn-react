@@ -1,13 +1,17 @@
 import './App.css';
 
 function App() {
-  function func(arg_1, event, arg_2) {
-    console.log(arg_1, event, arg_2);
-  }
+	const arr = [
+		<li>1</li>,
+		<li>2</li>,
+		<li>3</li>,
+		<li>4</li>,
+		<li>5</li>,
+	];
 
-  return <div>
-    <button onClick={event => func('eee', event, 'eee')}>act</button>
-  </div>;
+  return <ul>
+    {arr}
+  </ul>;
 }
 
 export default App;
