@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 
 function App() {
   const [name, setName] = useState('fullName');
-  const [age, setAge] = useState('Age');
 
   return <div>
-    <p>{name}</p>
-    <p>{age}</p>
+    <span>{name}</span><br />
+    <button onClick={() => setName('Pav A')}>Click me</button>
+    <button onClick={() => setName('fullname')}>reset</button>
   </div>
 }
 
