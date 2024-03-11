@@ -2,12 +2,15 @@ import './App.css';
 import React, { useState } from 'react';
 
 function App() {
-  const [name, setName] = useState('fullName');
+  const [isBanned, setBan] = useState('False');
 
   return <div>
-    <span>{name}</span><br />
-    <button onClick={() => setName('Pav A')}>Click me</button>
-    <button onClick={() => setName('fullname')}>reset</button>
+      <span>{isBanned ? "Banned" : "Not banned"}</span><br />
+      {isBanned ? (
+        <button onClick={() => setBan(false)}>Unban</button>
+      ) : (
+        <button onClick={() => setBan(true)}>Ban</button>
+      )}
   </div>
 }
 
