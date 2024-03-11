@@ -1,24 +1,13 @@
 import './App.css';
-import uuid from 'react-uuid';
+import React, { useState } from 'react';
 
 function App() {
-  function id() {
-    return uuid()
-  }
-  const prods = [
-    { id: id(), name: 'product1', cost: 100 },
-    { id: id(), name: 'product2', cost: 200 },
-    { id: id(), name: 'product3', cost: 300 },
-  ];
-  const res = prods.map(function(item) {
-		return <p id={item.id}>
-			<span>{item.name}</span>:
-			<span>{item.cost}</span>
-		</p>;
-	});
+  const [name, setName] = useState('fullName');
+  const [age, setAge] = useState('Age');
 
   return <div>
-    {res}
+    <p>{name}</p>
+    <p>{age}</p>
   </div>
 }
 
