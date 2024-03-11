@@ -2,16 +2,13 @@ import './App.css';
 import React, { useState } from 'react';
 
 function App() {
-  const [isBanned, setBan] = useState('False');
-
-  return <div>
-      <span>{isBanned ? "Banned" : "Not banned"}</span><br />
-      {isBanned ? (
-        <button onClick={() => setBan(false)}>Unban</button>
-      ) : (
-        <button onClick={() => setBan(true)}>Ban</button>
-      )}
-  </div>
+	const [count, setCount] = useState(0);
+	
+	return <div>
+		<span>{count}</span>
+		<button onClick={() => setCount(count + 1)}>+</button>
+    <button onClick={() => setCount(count - 1)}>-</button>
+	</div>;
 }
 
 export default App;
