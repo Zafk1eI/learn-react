@@ -2,12 +2,28 @@ import './App.css';
 import React, { useState } from 'react';
 
 function App() {
-  const [value, setValue] = useState('');
+  function calculateBirthYear(currentAge) {
+    const currentYear = new Date().getFullYear();
+    return currentYear - currentAge;
+  }
 
-  return <div>
-    <input value={value} onChange={event => setValue(event.target.value)} />
-    <p>cout: {value.length}</p>
-  </div>;
+  function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5 / 9;
+  }
+
+  const [age, setAge] = useState('');
+  const [fahrenheit, setFarenheit] = useState('');
+
+  return <>
+    <div>
+      <input value={age} onChange={event => setAge(event.target.value)} />
+      <p>cout: {calculateBirthYear(age)}</p>
+    </div>
+    <div>
+      <input value={fahrenheit} onChange={event => setFarenheit(event.target.value)} />
+      <p>cout: {fahrenheitToCelsius(fahrenheit)}</p>
+    </div>
+  </>;
 }
 
 export default App;
