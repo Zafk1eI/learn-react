@@ -5,8 +5,27 @@ function App() {
   const [html, setHtml] = useState(true);
   const [css, setCss] = useState(true);
   const [js, setJs] = useState(true);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleButtonClick = () => {
+    if (isChecked) {
+      document.getElementById('myParagraph').innerText = 'Привет';
+    } else {
+      document.getElementById('myParagraph').innerText = '';
+    }
+  };
 
   return <div>
+    <div>
+      <input
+        type="checkbox"
+        id="myCheckbox"
+        checked={isChecked}
+        onChange={() => setIsChecked(!isChecked)}
+      />
+      <button onClick={handleButtonClick}>Click me!</button>
+      <p id="myParagraph"></p>
+    </div>
     <form>
       <input type="checkbox" checked={html} onChange={() => setHtml(!html)} />
       <label>HTML</label>
